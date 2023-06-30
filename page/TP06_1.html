@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TP06.1: Tab</title>
+  </head>
+  <body class="h-screen flex flex-col justify-center items-center">
+    <div class="container m-auto w-fit h-5/6 flex flex-col bg-white border-2 rounded-lg">
+      <div class="profile flex flex-row grow-0 px-2 pt-2">
+        <div class="pic border-2 w-12 h-12 bg-slate-200 rounded-full px-2 border-slate-300"></div>
+        <div class="column ml-3">
+          <div class="name text-xl text-blue-600 font-bold">Friend Name</div>
+          <div class="date flex items-center">
+            <label for="" class="mr-2">Today at 19:33</label>
+            <ion-icon name="earth" class="text-slate-500"></ion-icon>
+          </div>
+        </div>
+        <div class="dots flex flex-row grow justify-end mt-2 w-96">
+          <div class="dots w-2 h-2 border-2 bg-gray-500 rounded-full"></div>
+          <div class="dots w-2 h-2 border-2 bg-gray-500 rounded-full"></div>
+          <div class="dots w-2 h-2 border-2 bg-gray-500 rounded-full"></div>
+        </div>
+      </div>
+      <div class="bio flex flex-col text-xl mt-5 grow-0 px-2">
+        <label for="">I want this mockup so bad!!</label>
+        <label for="">Fount it at <a href="http://marinad.com.ar" class="text-blue-800">http://marinad.com.ar</a></label>
+        <label for="" class="mt-1.5 text-blue-800 font-normal">See translation</label>
+      </div>
+      <div class="bg-blue-500 mt-5 flex grow mx-2"></div>
+      <div class="icon flex flex-row justify-evenly mt-3 px-2">
+        <div class="like flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z"
+            />
+          </svg>
+          <label for="" class="ml-2">Like</label>
+        </div>
+        <div class="like flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+            />
+          </svg>
+          <label for="" class="ml-2">Like</label>
+        </div>
+        <div class="like flex items-center">
+          <ion-icon name="arrow-redo-outline" class="w-6 h-6 text-slate-600"></ion-icon>
+          <label for="" class="ml-2">Share</label>
+        </div>
+      </div>
+      <div class="reaction bg-slate-100 mt-3 flex flex-col p-2">
+        <div class="flex mt-1">
+          <div class="w-6 h-6 bg-blue-500 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4">
+              <path
+                d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"
+              />
+            </svg>
+          </div>
+          <div class="w-6 h-6 bg-red-500 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4">
+              <path
+                d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+              />
+            </svg>
+          </div>
+          <div class="w-6 h-6 bg-yellow-500 flex justify-center items-center rounded-full">
+            <svg height="2500" width="2500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 192 192">
+              <defs>
+                <radialGradient id="a" cy="0%" gradientTransform="matrix(0 1 -1.26314 0 .5 -.5)" r="100%">
+                  <stop offset="0" stop-color="#fce16b" />
+                  <stop offset=".11" stop-color="#fce16b" />
+                  <stop offset=".205" stop-color="#fce06a" />
+                  <stop offset=".288" stop-color="#fcdf69" />
+                  <stop offset=".36" stop-color="#fcdd68" />
+                  <stop offset=".424" stop-color="#fbda66" />
+                  <stop offset=".483" stop-color="#fbd764" />
+                  <stop offset=".537" stop-color="#fbd361" />
+                  <stop offset=".591" stop-color="#facf5e" />
+                  <stop offset=".644" stop-color="#fac959" />
+                  <stop offset=".701" stop-color="#f9c254" />
+                  <stop offset=".763" stop-color="#f8bb4e" />
+                  <stop offset=".832" stop-color="#f8b147" />
+                  <stop offset=".91" stop-color="#f7a73d" />
+                  <stop offset="1" stop-color="#f69a31" />
+                </radialGradient>
+                <filter id="b" height="142.9%" width="118.7%" x="-9.4%" y="-21.4%"><feGaussianBlur in="SourceGraphic" stdDeviation="1" /></filter>
+                <linearGradient id="c" x1="10.909%" x2="85.942%" y1="55.621%" y2="50%">
+                  <stop offset="0" stop-color="#d06a00" />
+                  <stop offset=".51" stop-color="#e18000" />
+                  <stop offset="1" stop-color="#d47100" />
+                </linearGradient>
+                <linearGradient id="d" x1="50%" x2="50%" y1="15.514%" y2="100%">
+                  <stop offset="0" stop-color="#d16c00" stop-opacity="0" />
+                  <stop offset="1" stop-color="#ce6600" />
+                </linearGradient>
+                <filter id="e" height="142.9%" width="118.7%" x="-9.4%" y="-21.4%"><feGaussianBlur in="SourceGraphic" stdDeviation="1" /></filter>
+                <radialGradient id="f" cx="47.795%" cy="72.401%" gradientTransform="matrix(-.13245 .79295 -.76649 -.08194 1.096 .404)" r="98.416%">
+                  <stop offset="0" stop-color="#3e4672" />
+                  <stop offset=".086" stop-color="#3e4671" />
+                  <stop offset=".166" stop-color="#3d446f" />
+                  <stop offset=".239" stop-color="#3b426c" />
+                  <stop offset=".308" stop-color="#394068" />
+                  <stop offset=".374" stop-color="#363c63" />
+                  <stop offset=".438" stop-color="#33395d" />
+                  <stop offset=".5" stop-color="#2f3556" />
+                  <stop offset=".562" stop-color="#2b304f" />
+                  <stop offset=".626" stop-color="#282b48" />
+                  <stop offset=".692" stop-color="#242640" />
+                  <stop offset=".761" stop-color="#202239" />
+                  <stop offset=".834" stop-color="#1c1d32" />
+                  <stop offset=".914" stop-color="#1a1a2e" />
+                  <stop offset="1" stop-color="#19192c" />
+                </radialGradient>
+                <ellipse id="g" cx="136" cy="68" rx="16" ry="20" />
+                <filter id="h" height="107.5%" width="109.4%" x="-4.7%" y="-3.8%">
+                  <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1" />
+                  <feOffset dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1" />
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1" />
+                  <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.0611930497 0 0 0 0 0.0583983323 0 0 0 0 0.111497962 0 0 0 0.53944493 0" />
+                </filter>
+                <ellipse id="i" cx="56" cy="68" rx="16" ry="20" />
+                <filter id="j" height="107.5%" width="109.4%" x="-4.7%" y="-3.8%">
+                  <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1" />
+                  <feOffset dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1" />
+                  <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1" />
+                  <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.0611930497 0 0 0 0 0.0583983323 0 0 0 0 0.111497962 0 0 0 0.53944493 0" />
+                </filter>
+                <filter id="k" height="108.3%" width="110.7%" x="-5.4%" y="-4.2%"><feGaussianBlur in="SourceGraphic" stdDeviation="1" /></filter>
+                <linearGradient id="l" x1="50%" x2="50%" y1="0%" y2="100%">
+                  <stop offset="0" stop-color="#482314" />
+                  <stop offset=".084" stop-color="#492314" />
+                  <stop offset=".156" stop-color="#4d2414" />
+                  <stop offset=".219" stop-color="#512613" />
+                  <stop offset=".275" stop-color="#572813" />
+                  <stop offset=".327" stop-color="#5e2a12" />
+                  <stop offset=".378" stop-color="#642c12" />
+                  <stop offset=".429" stop-color="#6a2f11" />
+                  <stop offset=".483" stop-color="#703111" />
+                  <stop offset=".542" stop-color="#763310" />
+                  <stop offset=".608" stop-color="#7a350f" />
+                  <stop offset=".685" stop-color="#7e360f" />
+                  <stop offset=".775" stop-color="#81370e" />
+                  <stop offset=".879" stop-color="#83380e" />
+                  <stop offset="1" stop-color="#84380e" />
+                </linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <circle cx="96" cy="96" fill="url(#a)" r="96" />
+                <path
+                  d="M130.727 36.305c-.226.219-.525.695-2.227.695-1.228 0-2.338-.009-3.728-1.554-1.39-1.546-.568-3.605-.5-3.72a16.764 16.764 0 0 1 .67-1.043 17.315 17.315 0 0 1 2.33-2.704C130.53 24.903 135.03 23 140 23s9.47 1.903 12.728 4.98c.87.822 1.653 1.728 2.331 2.704.313.45.425.586.87 1.392.445.807-.332 4.924-3.503 4.924-3.17 0-3.465-.994-3.607-1.233a8.934 8.934 0 0 0-.48-.725 9.365 9.365 0 0 0-1.272-1.404c-1.795-1.62-4.27-2.546-7.06-2.546s-5.28.926-7.074 2.546c-.474.428-.9.898-1.271 1.403-.338.46-.71 1.044-.935 1.264z"
+                  fill="#fff3c5"
+                  filter="url(#b)"
+                  opacity=".449"
+                />
+                <path
+                  d="M130.413 34.946c.101-.098.19-.22.614-.826l.07-.1a9.865 9.865 0 0 1 1.536-1.753c1.91-1.724 4.53-2.675 7.409-2.675 2.876 0 5.484.949 7.395 2.675.5.45.949.947 1.34 1.479.182.248.351.503.507.765.333.56 1.151.989 3.178.989 2.244 0 3.996-2.78 3.065-4.182-.251-.455-.397-.699-.552-.929l-.038-.056c-.047-.07-.236-.339-.253-.363a16.815 16.815 0 0 0-2.264-2.627c-3.261-3.08-7.674-4.843-12.385-4.843s-9.123 1.763-12.384 4.843a16.815 16.815 0 0 0-2.913 3.637 1.27 1.27 0 0 0-.112.24c-.267.735-.17 1.715.601 2.954 1.403 2.173 4.14 1.79 5.186.772z"
+                  fill="url(#c)"
+                  stroke="url(#d)"
+                  transform="matrix(-1 0 0 1 280.27 0)"
+                />
+                <path
+                  d="M42.682 36.305c-.225.219-.524.695-2.227.695-1.228 0-2.338-.009-3.728-1.554-1.39-1.546-.567-3.605-.499-3.72a16.764 16.764 0 0 1 .67-1.043 17.315 17.315 0 0 1 2.33-2.704C42.484 24.903 46.984 23 51.954 23c4.971 0 9.471 1.903 12.728 4.98.871.822 1.653 1.728 2.332 2.704.312.45.425.586.87 1.392.445.807-.333 4.924-3.503 4.924s-3.465-.994-3.608-1.233a8.934 8.934 0 0 0-.48-.725 9.365 9.365 0 0 0-1.272-1.404c-1.794-1.62-4.27-2.546-7.06-2.546s-5.279.926-7.073 2.546c-.475.428-.9.898-1.272 1.403-.338.46-.71 1.044-.935 1.264z"
+                  fill="#fff3c5"
+                  filter="url(#e)"
+                  opacity=".449"
+                  transform="matrix(-1 0 0 1 103.924 0)"
+                />
+                <path
+                  d="M42.147 34.946c.101-.098.19-.22.614-.826l.07-.1a9.865 9.865 0 0 1 1.536-1.753c1.91-1.724 4.53-2.675 7.409-2.675 2.876 0 5.483.949 7.395 2.675.5.45.948.947 1.34 1.479.182.248.35.503.507.765.332.56 1.15.989 3.177.989 2.244 0 3.996-2.78 3.065-4.182-.25-.455-.396-.699-.551-.929l-.038-.056-.253-.363a16.815 16.815 0 0 0-2.265-2.627c-3.26-3.08-7.673-4.843-12.384-4.843s-9.123 1.763-12.385 4.843a16.815 16.815 0 0 0-2.912 3.637 1.27 1.27 0 0 0-.112.24c-.267.735-.17 1.715.6 2.954 1.404 2.173 4.14 1.79 5.187.772z"
+                  fill="url(#c)"
+                  stroke="url(#d)"
+                  transform="matrix(-1 0 0 1 103.738 0)"
+                />
+                <use fill="url(#f)" xlink:href="#g" />
+                <use fill="#000" filter="url(#h)" xlink:href="#g" />
+                <ellipse cx="133" cy="61" fill="#595e7c" rx="5" ry="6" transform="rotate(8 133 61)" />
+                <use fill="url(#f)" xlink:href="#i" />
+                <use fill="#000" filter="url(#j)" xlink:href="#i" />
+                <ellipse cx="53" cy="61" fill="#595e7c" rx="5" ry="6" transform="rotate(8 53 61)" />
+                <path
+                  d="M97 173c22.06-.667 28-16.118 28-36 0-17.882-10.536-36-28-36s-28 18.118-28 36c0 18.882 5.94 36.667 28 36z"
+                  fill="#fff3c5"
+                  filter="url(#k)"
+                  opacity=".449"
+                />
+                <path d="M97 172c22.06-.667 28-16.118 28-36 0-17.882-10.536-36-28-36s-28 18.118-28 36c0 18.882 5.94 36.667 28 36z" fill="url(#l)" />
+              </g>
+            </svg>
+          </div>
+          <label for="" class="ml-1 text-blue-900">1.035</label>
+        </div>
+        <div class="comment mt-2 flex justify-center items-center">
+          <div class="pic border-2 w-10 h-10 bg-slate-200 rounded-full px-2 border-slate-300"></div>
+          <div class="bg-white h-8 grow ml-2 rounded-full items-center flex p-4 border-2 border-gray-300">
+            <label for="" class="text-slate-400">Write something...</label>
+            <div class="flex grow justify-end items-center text-slate-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"
+                />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
+                />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 8.25v7.5m6-7.5h-3V12m0 0v3.75m0-3.75H18M9.75 9.348c-1.03-1.464-2.698-1.464-3.728 0-1.03 1.465-1.03 3.84 0 5.304 1.03 1.464 2.699 1.464 3.728 0V12h-1.5M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+                />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

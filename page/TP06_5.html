@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP06.5: Random color generator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            min-width: 100vh;
+            min-height: 100vh;
+            background-color: rgb(255, 255, 255);
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: 5px solid black;
+        }
+        #title{
+            color: royalblue;
+            background-color: white;
+            padding: 10px 0 10px 10px;
+        }
+        .display{
+            margin:10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            width: 450px;
+            background-color: black;
+            color: white;
+            padding: 20px 10px; 
+        }
+        .bgColor{
+            height: 700px;
+            background-color: white;
+        }
+        .record{
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            width: 100%;
+            background: white;
+            justify-content: space-evenly;
+            height: 35px;
+        }
+        .line{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: white;
+        }
+        .block{
+            display: none;
+            width: 10px;
+            height: 10px;
+            border: 2px black solid;
+            margin: 0 10px;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 50px 0;
+            width: 100%;
+        }
+        .buttons button{
+            text-transform: uppercase;
+            background-color: black;
+            color: white;
+            padding: 10px 10px;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .buttons button:hover:first-child{
+            color: black;
+            background: white;
+        }
+        .buttons button:last-child{
+            margin-left: 10px;
+            background: none;
+            color: black;
+        }
+        .buttons button:hover:last-child{
+            color: white;
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <label for="" id="title">Random Color Generate</label>
+        <div class="bgColor">
+            <div class="display">
+                <label for="">Background Color:</label>
+                <span id="hex">#ffffff</span>
+                
+            </div>
+            <div class="buttons">
+                <button for="" onclick="getNewcolor()">Generate</span>
+                <button for="" onclick="resetcolor()">Reset</span>
+            </div>
+            <div class="recorded">
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+                <div class="line">
+                    <label for="" class="block"></label>
+                    <span class="record"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom">
+
+        </div>
+    </div>
+
+    <script>
+        var checkColor;
+        var records = [];
+        function getNewcolor(){
+            const change = document.querySelector(".bgColor");
+            const a = document.querySelector("#hex");
+
+            var symbols,color,k=0;
+            symbols = "0123456789ABCDEF";
+            color = "#";
+
+            for(var i = 0;i<6;i++){
+                color = color + symbols[Math.floor(Math.random()*16)];
+            }
+            a.innerText=color;
+            a.style.color = color;
+            change.style.background = color; 
+
+            records.push(color);
+            checkColor = color;
+        }
+        function resetcolor(){
+            const reset = document.querySelector(".bgColor");
+            const a = document.querySelector("#hex");
+
+            reset.style.background = "#ffffff";
+            checkColor = "#ffffff"
+            records.push(checkColor);
+            a.innerText = "#ffffff";
+            a.style.color = checkColor;
+        }
+        function record(){
+            const b = document.querySelectorAll(".block");
+            const r = document.querySelectorAll(".record");
+            
+            let k=0,l=0;
+            addEventListener('click',()=>{
+                if(checkColor!=null){
+                    l=0;
+                    for(var i = records.length-1;i>=k;i--){
+                        b[l].style.display = "inline-flex";
+                        b[l].style.background = records[i];
+                        r[l].innerText = records[i];
+                        l++;
+                    }
+                    if(records.length>7) k++;
+                }
+            })
+        }
+        record();
+    </script>
+</body>
+</html>

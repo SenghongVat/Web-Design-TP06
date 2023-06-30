@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP06.3: Responsive Menu</title>
+
+    <style>
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        background-color: #f1f5f8;
+      }
+      .container {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+        text-align: center;
+        min-width: 500px;
+        min-height: 500px;
+      }
+      .container {
+        width: fit-content;
+        border-bottom: 2px solid orange;
+      }
+      .list {
+        display: flex;
+        flex-direction: row;
+      }
+      .contain {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-evenly;
+      }
+      .list label {
+        width: fit-content;
+        padding: 5px 10px;
+        color: darkgoldenrod;
+        border: 2px solid darkgoldenrod;
+        border-radius: 10px;
+      }
+      .listfood {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        width: 550px;
+      }
+      .listfood .des {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        font-weight: light;
+      }
+      .listfood .name {
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #a3a9ad;
+        margin-bottom: 10px;
+      }
+      .listfood img {
+        width: 200px;
+        border: 3px solid #c4a26f;
+      }
+
+      @media screen and (min-width: 0px) and (max-width: 500px) {
+        .listfood {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .listfood .des {
+          width: 320px;
+        }
+        .listfood img {
+          width: 320px;
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Our Menu</h1>
+      <div class="list">
+        <div class="contain">
+          <label for="">All</label>
+          <label for="">Breakfast</label>
+          <label for="">Lunch</label>
+          <label for="">Shakes</label>
+          <label for="">Dinner</label>
+        </div>
+      </div>
+      <div class="listfood">
+        <img src="/assets/img/Buttermilk Pancakes.jpeg" alt="" />
+        <div class="des">
+          <div class="name">
+            <label for="">Buttermilk Pancakes</label>
+            <label for="" style="color: #c2af86">$15.99</label>
+          </div>
+          <label for="" style="color: #838d94"
+            >I'm baby woke milkshake wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed</label
+          >
+        </div>
+      </div>
+      <div class="listfood">
+        <img src="/assets/img/Burger.jpeg" alt="" />
+        <div class="des">
+          <div class="name">
+            <label for="">Buttermilk Pancakes</label>
+            <label for="" style="color: #c2af86">$15.99</label>
+          </div>
+          <label for="" style="color: #838d94"
+            >vaporware Iphone mumblecore selvage raw denim slow-carb leggins gochujang helvetica man braid jianbing. Marfa thundercats</label
+          >
+        </div>
+      </div>
+      <div class="listfood">
+        <img src="/assets/img/Drink.jpeg" alt="" />
+        <div class="des">
+          <div class="name">
+            <label for="">Buttermilk Pancakes</label>
+            <label for="" style="color: #c2af86">$15.99</label>
+          </div>
+          <label for="" style="color: #838d94"
+            >ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.</label
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

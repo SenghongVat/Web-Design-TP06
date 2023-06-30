@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP06.4: Counter</title>
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        border: solid 5px;
+      }
+      .container {
+        display: flex;
+        height: 270px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .container label {
+        font-size: 54px;
+        color: rgb(16, 16, 122);
+      }
+      .option {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+        justify-content: space-around;
+      }
+      .option span {
+        border: 2px solid black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .decrease:hover {
+        background-color: green;
+      }
+      .reset:hover {
+        background-color: red;
+      }
+      .increase:hover {
+        background-color: green;
+      }
+      .num {
+        font-size: 90px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label for="">Counter</label>
+      <span class="num">0</span>
+      <div class="option">
+        <span class="decrease">Decrease</span>
+        <span class="reset">Reset</span>
+        <span class="increase">Increase</span>
+      </div>
+    </div>
+    <script>
+      var increase = document.querySelector(".increase");
+      var reset = document.querySelector(".reset");
+      var decrease = document.querySelector(".decrease");
+      var num = document.querySelector(".num");
+      let x = 0;
+
+      increase.addEventListener("click", () => {
+        x += 1;
+        num.innerText = x;
+      });
+      reset.addEventListener("click", () => {
+        x = 0;
+        num.innerText = x;
+      });
+      decrease.addEventListener("click", () => {
+        x -= 1;
+        num.innerText = x;
+      });
+    </script>
+  </body>
+</html>

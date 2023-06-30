@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>TP06.7: Side Bar</title>
+    <style>
+      body {
+        background-color: lightgray;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 0 10px;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: rgb(16, 40, 110);
+      }
+      .nav {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+      }
+      .icon {
+        display: flex;
+        width: 20%;
+        justify-content: space-evenly;
+        color: royalblue;
+      }
+      .dropBar {
+        display: none;
+        width: 5%;
+        cursor: pointer;
+      }
+      .dropMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: white;
+        overflow: hidden;
+        height: 0;
+        display: none;
+        padding-left: 10px;
+      }
+      .dropMenu.drop {
+        height: 97.5%;
+        position: absolute;
+        flex-direction: column;
+        flex-grow: 1;
+        top: 1%;
+
+        backdrop-filter: blur(10px);
+        width: 300px;
+      }
+      .icons {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        gap: 10px;
+        color: royalblue;
+      }
+      @media screen and (min-width: 0px) and (max-width: 720px) {
+        .nav {
+          display: none;
+        }
+        .icon {
+          display: none;
+        }
+        .dropBar {
+          display: inline-flex;
+        }
+        .dropMenu {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Nav-Bar</h1>
+      <div class="nav">
+        <label for="">Home</label>
+        <label for="">About</label>
+        <label for="">Project</label>
+        <label for="">Contact</label>
+      </div>
+      <div class="icon">
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-behance"></ion-icon>
+        <ion-icon name="logo-linkedin"></ion-icon>
+        <ion-icon name="logo-apple"></ion-icon>
+      </div>
+      <div class="dropBar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropMenu">
+      <div style="display: flex; width: 100%; align-items: center; justify-content: space-between">
+        <h1 style="font-size: 24px">Side-Bar</h1>
+        <i class="fa-solid fa-x" style="margin-right: 10px; cursor: pointer"></i>
+      </div>
+      <label for="">Home</label>
+      <label for="">About</label>
+      <label for="">Project</label>
+      <label for="" style="margin-bottom: 10px">Contact</label>
+      <div style="flex-grow: 10"></div>
+      <div class="icons">
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-behance"></ion-icon>
+        <ion-icon name="logo-linkedin"></ion-icon>
+        <ion-icon name="logo-apple"></ion-icon>
+      </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      const NavBar = document.querySelector(".dropBar");
+      const NavBarX = document.querySelector(".dropMenu i");
+      const dropMenuBar = document.querySelector(".dropMenu");
+      const contain = document.querySelector(".container");
+
+      NavBar.onclick = function () {
+        dropMenuBar.classList.add("drop");
+
+        const changeColor = dropMenuBar.classList.contains("drop");
+        NavBar.classList = changeColor ? (contain.style.background = "gainsboro") : "";
+      };
+      NavBarX.onclick = function () {
+        dropMenuBar.classList.remove("drop");
+
+        const changeColor = dropMenuBar.classList.contains("");
+        NavBarX.classList.contains(changeColor) ? "" : (contain.style.background = "white");
+      };
+    </script>
+  </body>
+</html>

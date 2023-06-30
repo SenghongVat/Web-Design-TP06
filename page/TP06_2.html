@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TP06.2: Tab</title>
+    <style>
+      .button {
+        transition: 0.2s;
+      }
+      .container button:hover {
+        background-color: #bebebe;
+      }
+
+      .content {
+        display: none;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid rgb(231, 193, 193);
+        border-top: none;
+        background-color: rgb(245, 240, 240);
+      }
+      .content h1 {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .buttons button.active {
+        background-color: rgb(245, 240, 240);
+        border-bottom: none;
+      }
+
+      .buttons {
+        animation: fadeEffect 1s;
+      }
+      @keyframes fadeEffect {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen flex flex-col justify-center items-center bg-slate-200">
+    <div class="container w-5/6 flex flex-col justify-center items-center px-5">
+      <label for="" class="font-bold text-2xl">About</label>
+      <label for="" class="mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit !</label>
+      <img
+        src="https://www.brinknews.com/wp-content/uploads/2021/12/pexels-tyler-lastovich-808465-scaled.jpg"
+        class="mt-16 rounded-lg w-full h-80"
+        alt=""
+      />
+      <div class="buttons w-full mt-10 flex flex-row justify-evenly" id="buttons">
+        <button
+          class="tab border-2 rounded-tl-xl border-slate-300 grow py-1 font-semibold text-slate-800 bg-slate-300"
+          onclick="openTab(event,'history')"
+        >
+          History
+        </button>
+        <button class="tab border-y-2 border-slate-300 grow py-1 font-semibold text-slate-800 bg-slate-300" onclick="openTab(event,'vision')">
+          Vision
+        </button>
+        <button
+          class="tab border-2 rounded-tr-xl border-slate-300 grow py-1 font-semibold text-slate-800 bg-slate-300"
+          onclick="openTab(event,'goal')"
+        >
+          Goal
+        </button>
+      </div>
+
+      <div id="history" class="content">
+        <h1>History</h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut numquam veritatis impedit nihil repellendus? Molestias sunt suscipit corrupti
+        voluptatibus porro voluptate, quaerat similique totam aspernatur quis tenetur mollitia repudiandae quidem velit placeat sed qui alias sequi
+        iusto nam dolorum dolores inventore neque beatae. Aspernatur voluptatibus repellendus, cumque deserunt dolores laudantium.
+      </div>
+      <div id="vision" class="content">
+        <h1>Vision</h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut numquam veritatis impedit nihil repellendus? Molestias sunt suscipit corrupti
+        voluptatibus porro voluptate, quaerat similique totam aspernatur quis tenetur mollitia repudiandae quidem velit placeat sed qui alias sequi
+        iusto nam dolorum dolores inventore neque beatae. Aspernatur voluptatibus repellendus, cumque deserunt dolores laudantium.
+      </div>
+      <div id="goal" class="content">
+        <h1>Goal</h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut numquam veritatis impedit nihil repellendus? Molestias sunt suscipit corrupti
+        voluptatibus porro voluptate, quaerat similique totam aspernatur quis tenetur mollitia repudiandae quidem velit placeat sed qui alias sequi
+        iusto nam dolorum dolores inventore neque beatae. Aspernatur voluptatibus repellendus, cumque deserunt dolores laudantium.
+      </div>
+    </div>
+    <script>
+      function openTab(evt, name) {
+        var i, tab, content;
+        tab = document.getElementsByClassName("content");
+        for (i = 0; i < tab.length; i++) {
+          tab[i].style.display = "none";
+        }
+        content = document.getElementsByClassName("tab");
+        for (i = 0; i < content.length; i++) {
+          content[i].className = content[i].className.replace(" active", "");
+        }
+        document.getElementById(name).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
